@@ -419,22 +419,26 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
     </div>
   </div>
   <div class="hero-right">
-    <!-- Hero grid uses real carpet photos (P1 — lead with real imagery) -->
+    <!-- Hero grid: real installed project photo + real material photography -->
     <div class="fabric-grid">
       <div class="fg-cell fg-cell-tall">
-        <img src="images/carpet14.jpg" alt="Persian Medallion carpet — blue and ivory heritage design" loading="eager">
-        <div class="fg-label">Carpets &amp; Rugs</div>
+        <img src="images/hero-reception.jpg" alt="Anchorline hospitality project — wood-panelled reception with broadloom carpet" loading="eager">
+        <div class="fg-label">Materials, Installed</div>
       </div>
       <div class="fg-cell">
-        <img src="images/carpet5.jpg" alt="Retro Links carpet — warm grey and chocolate statement piece" loading="eager">
+        <img src="images/carpet14.jpg" alt="Persian Medallion carpet — navy, burgundy and gold heritage design" loading="eager">
         <div class="fg-label">Bestseller</div>
       </div>
       <div class="fg-cell">
-        <img src="images/carpet3.jpg" alt="Marble Effect carpet — taupe and ivory timeless neutral" loading="eager">
+        <img src="images/carpet5.jpg" alt="Retro Links carpet — interlocking quatrefoil motif in navy and gold" loading="eager">
+        <div class="fg-label">Carpets &amp; Rugs</div>
+      </div>
+      <div class="fg-cell">
+        <img src="images/carpet3.jpg" alt="Marble Effect carpet — slate blue and dove grey cellular texture" loading="eager">
         <div class="fg-label">Marble Effect</div>
       </div>
       <div class="fg-cell">
-        <img src="images/carpet1.jpg" alt="Geometric Grid carpet — blue and taupe contemporary motif" loading="eager">
+        <img src="images/carpet1.jpg" alt="Geometric Grid carpet — navy diamond lattice motif" loading="eager">
         <div class="fg-label">Geometric Grid</div>
       </div>
     </div>
@@ -680,40 +684,39 @@ var testimonials = [
 // ─── Products data ────────────────────────────────────────────
 var products = [
   // CARPET TILES & BROADLOOM
-  {cat:'carpet-tiles',tag:'Hospitality',name:'Commercial Carpet Tile',desc:'800–1500 GSM commercial carpet tiles for guest rooms, corridors and banquet spaces · FR-certified options · Hospitality spec · Custom colourways available',swatches:['#6A5840','#9A9080','#3A3020','#C4B0A0'],tex:'tex-carpet-geo',img:''},
-  {cat:'carpet-tiles',tag:'Hospitality',name:'Broadloom Carpet',desc:'Wide-loom broadloom carpets for large-area installations · Hotels, resorts and serviced apartments · Dye-lot consistency across bulk orders',swatches:['#A0A8B8','#9A9080','#E8E0D0','#6A5840'],tex:'tex-carpet-geo',img:''},
-  {cat:'carpet-tiles',tag:'New',name:'Geometric Tile Collection',desc:'Contemporary geometric motifs in modular tile format · Easily replaceable sections · Ideal for high-traffic hotel corridors',swatches:['#5A7090','#9A9080','#3A3020','#E8E0D0'],tex:'tex-carpet-geo',img:''},
-  {cat:'carpet-tiles',tag:'',name:'Axminster Weave Broadloom',desc:'Traditional Axminster weave · Rich pattern definition · Hospitality-grade pile weight · Suited to banquet halls and lobbies',swatches:['#6A5840','#A0A8B8','#C4B0A0','#3A3020'],tex:'tex-carpet-geo',img:''},
+  {cat:'carpet-tiles',tag:'Hospitality',name:'Commercial Carpet Tile',desc:'800–1500 GSM commercial carpet tiles for guest rooms, corridors and banquet spaces · FR-certified options · Hospitality spec · Custom colourways available',swatches:['#9B9E98','#7A7D78','#5E605D','#3B3C3B'],tex:'tex-carpet-geo',img:'images/carpet-tile-commercial.jpg'},
+  {cat:'carpet-tiles',tag:'Hospitality',name:'Broadloom Carpet',desc:'Wide-loom broadloom carpets for large-area installations · Hotels, resorts and serviced apartments · Dye-lot consistency across bulk orders',swatches:['#ACABA4','#91918B','#81817C','#5E5D57'],tex:'tex-carpet-geo',img:'images/broadloom-carpet.jpg'},
+  {cat:'carpet-tiles',tag:'New',name:'Geometric Tile Collection',desc:'Contemporary geometric grid motif in modular tile format · Chartreuse on charcoal · Easily replaceable sections · Ideal for high-traffic hotel corridors',swatches:['#5B5A4C','#474644','#413F3E','#9AA23A'],tex:'tex-carpet-geo',img:'images/carpet-tile-geometric.jpg'},
+  {cat:'carpet-tiles',tag:'',name:'Axminster Weave Broadloom',desc:'Traditional Axminster weave · Deep navy colourway · Rich pattern definition · Hospitality-grade pile weight · Suited to banquet halls and lobbies',swatches:['#6A7284','#39415A','#212942','#0C122A'],tex:'tex-carpet-geo',img:'images/carpet-axminster.jpg'},
 
   // CURTAINS & FABRICS
   {cat:'curtains',tag:'Hospitality',name:'Banquet Weave',desc:'Heavy-duty upholstery · Ideal for hotel banquet chairs, lounge seating & lobby furniture · FR-ready, high rub count',swatches:['#8B6858','#6A4A3A','#C4A882','#4A3028'],tex:'',img:'images/upholstery1.jpg'},
   {cat:'curtains',tag:'Hospitality',name:'Grand Upholstery',desc:'Rich woven texture · Designed for hotel headboards, feature walls & accent seating · Hospitality grade, wide-width available',swatches:['#9A8070','#7A6050','#C4B0A0','#5A4040'],tex:'',img:'images/upholstery2.jpg'},
-  // TODO: replace img value with real fabric photo path when available, e.g. 'images/tuscany-linen.jpg'
-  {cat:'curtains',tag:'Bestseller',name:'Tuscany Linen Weave',desc:'Natural linen blend · Neutral palette · Suitable for drapes and panels',swatches:['#D4C4B0','#C0B09A','#E8E0D0','#B4A490'],tex:'p-linen',img:''},
-  // TODO: replace img value with real fabric photo path when available
+  {cat:'curtains',tag:'Bestseller',name:'Tuscany Linen Weave',desc:'Natural linen blend · Ivory neutral palette · Suitable for drapes and panels',swatches:['#B4B5B2','#ABABA8','#A4A39F','#989691'],tex:'p-linen',img:'images/tuscany-linen.jpg'},
+  // TODO(photo pass): no real photo in the library yet — keep placeholder tile until sourced
   {cat:'curtains',tag:'New',name:'Midnight Velvet',desc:'Heavy velvet · Blackout-grade · 12 colorways available',swatches:['#3A2418','#4A3028','#6B4A3A','#8B6858'],tex:'p-velvet',img:''},
-  // TODO: replace img value with real fabric photo path when available
+  // TODO(photo pass): no real photo in the library yet — keep placeholder tile until sourced
   {cat:'curtains',tag:'',name:'Sheer Whisper Voile',desc:'Lightweight voile · Light-diffusing · Ideal for layering',swatches:['#F0EBE0','#E8E2D6','#DDD8CC','#F4F0E8'],tex:'p-sheer',img:''},
 
-  // CARPETS — real photos available
-  {cat:'carpets',tag:'New',name:'Geometric Grid',desc:'Contemporary grid motif · Blue and taupe tones · Custom sizes available',swatches:['#9A9080','#5A7090','#3A3020','#E8E0D0'],tex:'',img:'images/carpet1.jpg'},
-  {cat:'carpets',tag:'',name:'Abstract Circles',desc:'Artistic brushstroke circles · Blue and ivory on taupe · Plush pile',swatches:['#9A9080','#5A7090','#F0EBE0','#3A3020'],tex:'',img:'images/carpet2.jpg'},
-  {cat:'carpets',tag:'',name:'Marble Effect',desc:'Organic marble texture · Taupe and ivory · Timeless neutral',swatches:['#B8B0A0','#E8E0D0','#9A9080','#D0C8B8'],tex:'',img:'images/carpet3.jpg'},
-  {cat:'carpets',tag:'',name:'Stone Vein',desc:'Dramatic stone veining · Dual-tone grey and taupe · Modern luxury',swatches:['#A0A8B0','#9A9080','#E8E0D0','#7A7870'],tex:'',img:'images/carpet4.jpg'},
-  {cat:'carpets',tag:'Bestseller',name:'Retro Links',desc:'Bold interlocking rectangles · Warm grey and chocolate · Statement piece',swatches:['#A8A098','#6A5840','#E8E0D0','#7A7060'],tex:'',img:'images/carpet5.jpg'},
-  {cat:'carpets',tag:'',name:'Distressed Cloud',desc:'Soft distressed texture · Ivory and grey mist · Understated elegance',swatches:['#D8D0C8','#B0A8A0','#F0EBE0','#9A9890'],tex:'',img:'images/carpet6.jpg'},
-  {cat:'carpets',tag:'',name:'Classic Border',desc:'Traditional border frame · Marble centre · Blue accent · Heritage design',swatches:['#A0A8B8','#9A9080','#6A5840','#E8E0D0'],tex:'',img:'images/carpet7.jpg'},
-  {cat:'carpets',tag:'',name:'Watercolour Marble',desc:'Fluid watercolour effect · Blue and taupe wash · Artist collection',swatches:['#9A9080','#5A7090','#D8D0C8','#3A4858'],tex:'',img:'images/carpet8.jpg'},
-  {cat:'carpets',tag:'',name:'Ivory Texture',desc:'Subtle two-tone texture · Ivory and warm brown · Versatile base',swatches:['#E8E4D8','#6A5840','#D0C8B8','#9A9080'],tex:'',img:'images/carpet9.jpg'},
-  {cat:'carpets',tag:'',name:'Washed Terrain',desc:'Worn terrain effect · Blue highlights · Vintage character',swatches:['#A8A098','#5A7090','#E8E0D0','#7A7060'],tex:'',img:'images/carpet10.jpg'},
-  {cat:'carpets',tag:'New',name:'Topographic Wave',desc:'Contour map pattern · Blue and taupe lines · Contemporary statement',swatches:['#9A9080','#5A7090','#3A3020','#D8D0C8'],tex:'',img:'images/carpet11.jpg'},
-  {cat:'carpets',tag:'',name:'Abstract Patina',desc:'Patina distressed finish · Blue and grey tones · Urban luxury',swatches:['#A0A8B0','#5A7090','#9A9080','#E8E0D0'],tex:'',img:'images/carpet12.jpg'},
-  {cat:'carpets',tag:'',name:'River Flow',desc:'Flowing organic lines · Ivory and chocolate on grey · Sculptural',swatches:['#A8A098','#6A5840','#E8E0D0','#7A7060'],tex:'',img:'images/carpet13.jpg'},
-  {cat:'carpets',tag:'Bestseller',name:'Persian Medallion',desc:'Classic Persian medallion · Blue and ivory · Timeless heritage',swatches:['#A0A8B8','#9A9080','#E8E0D0','#6A5840'],tex:'',img:'images/carpet14.jpg'},
+  // CARPETS — real photos (Anchorline Regal Collection broadloom + abstract terrain designs)
+  {cat:'carpets',tag:'New',name:'Geometric Grid',desc:'Dense diamond lattice motif · Navy ground with ivory and gold repeat · Custom sizes available',swatches:['#B2ADA5','#696563','#2B364E','#1A2646'],tex:'',img:'images/carpet1.jpg'},
+  {cat:'carpets',tag:'',name:'Abstract Circles',desc:'Ornamental quatrefoil medallions · Navy ground with ivory and gold detail · Plush pile',swatches:['#AFA7A2','#5D565A','#242E4A','#172143'],tex:'',img:'images/carpet2.jpg'},
+  {cat:'carpets',tag:'',name:'Marble Effect',desc:'Organic cellular marble texture · Slate blue and dove grey · Timeless neutral',swatches:['#7D6F6A','#655A5C','#594D50','#483D43'],tex:'',img:'images/carpet3.jpg'},
+  {cat:'carpets',tag:'',name:'Stone Vein',desc:'Dramatic agate-slice veining · Warm terracotta and cream · Modern luxury',swatches:['#B28E7F','#9D6355','#8F4237','#7A332E'],tex:'',img:'images/carpet4.jpg'},
+  {cat:'carpets',tag:'Bestseller',name:'Retro Links',desc:'Bold interlocking quatrefoil motif · Navy and gold on ivory · Statement piece',swatches:['#DBD2CC','#8E7874','#645666','#40304F'],tex:'',img:'images/carpet5.jpg'},
+  {cat:'carpets',tag:'',name:'Distressed Cloud',desc:'Soft brushstroke terrain texture · Grey and taupe mist · Understated elegance',swatches:['#968D81','#79766F','#626465','#4A4E57'],tex:'',img:'images/carpet6.jpg'},
+  {cat:'carpets',tag:'',name:'Classic Border',desc:'Traditional bordered medallion · Rust and ivory · Heritage design',swatches:['#C1B6AA','#927D6B','#806C5D','#675449'],tex:'',img:'images/carpet7.jpg'},
+  {cat:'carpets',tag:'',name:'Watercolour Marble',desc:'Soft quatrefoil wash · Sage and ivory tonal palette · Artist collection',swatches:['#DCD6CA','#948669','#736E53','#555339'],tex:'',img:'images/carpet8.jpg'},
+  {cat:'carpets',tag:'',name:'Ivory Texture',desc:'Dense floral lattice on ivory ground · Navy and burgundy accents · Versatile base',swatches:['#E3D2BC','#D1B596','#9D8C7D','#574746'],tex:'',img:'images/carpet9.jpg'},
+  {cat:'carpets',tag:'',name:'Washed Terrain',desc:'Weathered coastal drift pattern · Charcoal and taupe · Vintage character',swatches:['#65625E','#4F4943','#3E4040','#2E3236'],tex:'',img:'images/carpet10.jpg'},
+  {cat:'carpets',tag:'New',name:'Topographic Wave',desc:'Sculpted mountain contour pattern · Slate grey tones · Contemporary statement',swatches:['#898E8F','#6D7379','#595F68','#37414D'],tex:'',img:'images/carpet11.jpg'},
+  {cat:'carpets',tag:'',name:'Abstract Patina',desc:'Aged organic surface texture · Warm bronze and taupe · Urban luxury',swatches:['#8A7D67','#7D705B','#766B58','#6B6252'],tex:'',img:'images/carpet12.jpg'},
+  {cat:'carpets',tag:'',name:'River Flow',desc:'Flowing river-branch pattern · Rust, indigo and cream · Sculptural',swatches:['#90796D','#5D5256','#7C352F','#623533'],tex:'',img:'images/carpet13.jpg'},
+  {cat:'carpets',tag:'Bestseller',name:'Persian Medallion',desc:'Classic Persian medallion · Navy, burgundy and gold · Timeless heritage',swatches:['#A8A2A0','#574B4B','#4D3B3F','#3C2833'],tex:'',img:'images/carpet14.jpg'},
 
   // BLINDS
   {cat:'blinds',tag:'Popular',name:'Copenhagen Roller',desc:'Sunscreen fabric · 3% openness · Motorised option available',swatches:['#C0B09A','#D0C0AA','#B0A08A','#E0D0BA'],tex:'p-roller',img:''},
-  {cat:'blinds',tag:'',name:'Chambord Roman Blind',desc:'Linen-look fabric · Flat fold · Multiple widths',swatches:['#C4B49A','#B8A888','#D4C4A8','#A89878'],tex:'p-roman',img:''},
+  {cat:'blinds',tag:'',name:'Chambord Roman Blind',desc:'Linen-look fabric in sage · Flat fold · Multiple widths',swatches:['#CED7CA','#ACBDAF','#A2B19D','#7E9377'],tex:'p-roman',img:'images/roman-blind.jpg'},
   {cat:'blinds',tag:'New',name:'Duo Zebra Blind',desc:'Day and night fabric · Alternating sheer and opaque bands',swatches:['#1E1A17','#3E3A37','#F2EDE5','#C4B9A8'],tex:'p-zebra',img:''},
 
   // LVT FLOORING
