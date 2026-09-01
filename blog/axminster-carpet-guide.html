@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What Is Axminster Carpet? A Guide for Hotels and Corporate Interiors | Anchorline</title>
-<meta name="description" content="Axminster carpet is woven, not tufted — making it the preferred specification for hotel lobbies, boardrooms and VIP suites. Anchorline explains what it is, why designers specify it, and how to source it in India.">
+<meta name="description" content="Axminster carpet is woven, not tufted — making it the preferred specification for hotel lobbies, boardrooms and VIP suites. Anchorline explains what it is, its 270-year history, and why designers specify it for premium interiors in India.">
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231A2B6B'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23F5A623' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 
@@ -22,17 +22,9 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What Is Axminster Carpet? A Guide for Hotels and Corporate Interiors",
-  "description": "Axminster carpet is woven, not tufted — making it the preferred specification for hotel lobbies, boardrooms and VIP suites. This guide explains the construction, use cases, and why designers specify Axminster over standard broadloom.",
-  "author": {
-    "@type": "Organization",
-    "name": "Anchorline",
-    "url": "https://anchorline.in"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Anchorline Global Trade Pvt. Ltd.",
-    "url": "https://anchorline.in"
-  },
+  "description": "Axminster carpet is woven, not tufted — making it the preferred specification for hotel lobbies, boardrooms and VIP suites. This guide covers its 270-year history, construction, use cases, and why designers specify Axminster over standard broadloom.",
+  "author": {"@type":"Organization","name":"Anchorline","url":"https://anchorline.in"},
+  "publisher": {"@type":"Organization","name":"Anchorline Global Trade Pvt. Ltd.","url":"https://anchorline.in"},
   "datePublished": "2026-09-01",
   "url": "https://anchorline.in/blog/axminster-carpet-guide.html",
   "mainEntityOfPage": "https://anchorline.in/blog/axminster-carpet-guide.html"
@@ -69,19 +61,50 @@
   .btn-nav{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 20px;border-radius:2px;border:1.5px solid var(--forest);color:var(--forest);background:transparent;cursor:pointer;text-decoration:none;transition:all .2s}
   .btn-nav:hover{background:var(--forest);color:var(--white)}
 
+  /* ── Hero ── */
+  .article-hero{position:relative;height:480px;overflow:hidden;background:var(--forest)}
+  .article-hero img{width:100%;height:100%;object-fit:cover;opacity:.55}
+  .article-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:56px 80px;background:linear-gradient(to top,rgba(26,43,107,.85) 0%,transparent 60%)}
+  .article-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .article-hero h1{font-family:'Georgia',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--white);line-height:1.2;max-width:700px}
+  .article-hero-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,248,242,.55);margin-top:20px}
+
   /* ── Article Layout ── */
-  .article-wrap{max-width:760px;margin:0 auto;padding:80px 32px 120px}
-  .article-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:16px}
-  .article-title{font-family:'Georgia',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--forest);line-height:1.2;margin-bottom:24px}
-  .article-meta{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(28,28,30,.45);margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--warm)}
-  .article-body h2{font-family:'Georgia',serif;font-size:1.35rem;font-weight:700;color:var(--forest);margin:48px 0 16px;line-height:1.3}
+  .article-wrap{max-width:760px;margin:0 auto;padding:72px 32px 120px}
+  .article-body h2{font-family:'Georgia',serif;font-size:1.35rem;font-weight:700;color:var(--forest);margin:52px 0 16px;line-height:1.3}
   .article-body h3{font-family:'Georgia',serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin:32px 0 12px}
   .article-body p{font-size:1.05rem;line-height:1.8;margin-bottom:20px;color:rgba(28,28,30,.85)}
   .article-body ul{margin:0 0 20px 24px}
   .article-body ul li{font-size:1.05rem;line-height:1.8;margin-bottom:8px;color:rgba(28,28,30,.85)}
   .article-body strong{color:var(--ink);font-weight:700}
+
+  /* ── Callout / pull quote ── */
   .article-callout{background:var(--sand);border-left:3px solid var(--gold);padding:24px 28px;margin:40px 0;border-radius:0 4px 4px 0}
-  .article-callout p{margin:0;font-style:italic;color:var(--forest)}
+  .article-callout p{margin:0;font-style:italic;color:var(--forest);font-size:1.1rem}
+
+  /* ── Photo blocks ── */
+  .photo-block{margin:48px 0;border-radius:4px;overflow:hidden}
+  .photo-block img{width:100%;height:360px;object-fit:cover;display:block}
+  .photo-caption{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(28,28,30,.4);padding:10px 0 0;text-align:center}
+  .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:48px 0}
+  .photo-grid img{width:100%;height:240px;object-fit:cover;border-radius:4px;display:block}
+
+  /* ── History timeline ── */
+  .timeline{margin:40px 0;border-left:2px solid var(--warm);padding-left:28px}
+  .timeline-item{margin-bottom:28px;position:relative}
+  .timeline-item::before{content:'';position:absolute;left:-35px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--white);box-shadow:0 0 0 2px var(--gold)}
+  .timeline-year{font-family:var(--mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:4px}
+  .timeline-item p{font-size:.95rem;line-height:1.7;margin:0;color:rgba(28,28,30,.75)}
+
+  /* ── Anchorline capability block ── */
+  .capability-block{margin:52px 0;padding:40px;background:linear-gradient(135deg,var(--sand) 0%,var(--cream) 100%);border-radius:4px;border:1px solid rgba(196,168,130,.3)}
+  .capability-block .cap-eyebrow{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px}
+  .capability-block h2{font-family:'Georgia',serif;font-size:1.4rem;font-weight:700;color:var(--forest);margin:0 0 16px;line-height:1.3}
+  .capability-block p{font-size:1rem;line-height:1.75;margin-bottom:16px;color:rgba(28,28,30,.8)}
+  .capability-block p:last-of-type{margin-bottom:0}
+  .cap-points{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cap-points li{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--forest);padding:10px 14px;background:var(--white);border-radius:2px;border:1px solid rgba(196,168,130,.3)}
+  .cap-points li::before{content:'✓ ';color:var(--gold);font-weight:700}
 
   /* ── CTA ── */
   .article-cta{margin-top:64px;padding:48px;background:linear-gradient(135deg,var(--forest),#2A3F8F);border-radius:4px;text-align:center}
@@ -102,8 +125,13 @@
   @media(max-width:768px){
     nav{padding:0 20px}
     .nav-links{display:none}
+    .article-hero{height:320px}
+    .article-hero-overlay{padding:32px 24px}
     .article-wrap{padding:48px 20px 80px}
     .article-cta{padding:32px 24px}
+    .photo-grid{grid-template-columns:1fr}
+    .cap-points{grid-template-columns:1fr}
+    .capability-block{padding:28px 20px}
   }
 </style>
 </head>
@@ -123,76 +151,132 @@
   <a href="/#contact" class="btn-nav">Get in Touch</a>
 </nav>
 
+<!-- Hero -->
+<div class="article-hero">
+  <img src="../images/carpet5.jpg" alt="Woven Axminster carpet — bold interlocking pattern for premium hospitality interiors">
+  <div class="article-hero-overlay">
+    <div class="article-eyebrow">Insights · Materials Guide</div>
+    <h1>What Is Axminster Carpet? A Guide for Hotels and Corporate Interiors</h1>
+    <div class="article-hero-meta">By Anchorline &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; 6 min read</div>
+  </div>
+</div>
+
 <div class="article-wrap">
 
   <a href="/" class="back-link">← Back to Anchorline</a>
 
-  <div class="article-eyebrow">Insights · Materials Guide</div>
-  <h1 class="article-title">What Is Axminster Carpet? A Guide for Hotels and Corporate Interiors</h1>
-  <div class="article-meta">By Anchorline &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; 5 min read</div>
-
   <div class="article-body">
 
-    <p>When a luxury hotel specifies carpet for its main lobby or a corporate boardroom requires flooring that will still look pristine after a decade of daily use, the answer is almost always the same: <strong>Axminster carpet</strong>. Yet despite its ubiquity in premium hospitality and corporate interiors, the name causes confusion — many designers and fit-out contractors aren't sure what makes Axminster different from standard broadloom, or why it commands a premium. This guide covers both.</p>
+    <p>Ask any hospitality designer what carpet goes in a five-star lobby and the answer comes back almost without thought: Axminster. It's specified so consistently, across so many categories of premium space, that it has become almost shorthand for "serious carpet." And yet a surprising number of designers and fit-out contractors can't explain exactly what makes it different from ordinary broadloom, or why it commands the price it does. The answer starts in a small English town in 1755.</p>
 
-    <h2>Woven, Not Tufted — Why the Distinction Matters</h2>
+    <h2>270 Years of History</h2>
 
-    <p>Most carpet sold in India today is <strong>tufted</strong>. In tufted carpet, pile yarns are punched through a pre-woven backing fabric using a tufting gun — fast, economical, and versatile, but the pile is held in place by an adhesive secondary backing rather than by the structure of the weave itself.</p>
+    <p>Axminster is not a brand. It's a construction method, named after the town in Devon, England where a weaver named <strong>Thomas Whitty</strong> developed it. Whitty had encountered Turkish and Persian carpets in London and was struck by their depth of pattern and structural integrity. He set about replicating that knotted-pile quality on English looms at commercial scale. What he created was a technique that locked pile yarns directly into the backing as the carpet was woven, row by row, without any secondary adhesive.</p>
 
-    <p><strong>Axminster carpet is woven</strong>. The pile yarns are interlocked into the backing structure during the weaving process itself, on a traditional Axminster loom. There is no secondary adhesive backing — the pile is mechanically secured by the weave. The practical consequences of this are significant:</p>
+    <p>The fabric it produced was unlike anything that had existed in British manufacture: richly patterned, structurally sound, and capable of holding a complex design without the pile drifting or loosening over time. Within a few decades, Axminster carpet was being installed in royal residences and grand hotels across Europe. It earned Royal Warrants. It went into palaces. It crossed the Atlantic on ocean liners.</p>
 
-    <ul>
-      <li><strong>Pile security:</strong> Because the pile is woven in rather than glued, individual tufts cannot work loose over time. This is why Axminster is the standard specification for high-footfall areas where tuft loss in a tufted carpet would be a maintenance problem.</li>
-      <li><strong>Pattern definition:</strong> Axminster looms can weave complex, multi-colour patterns row by row with a precision that tufted manufacturing cannot match. Medallion motifs, custom border designs, and fine geometric repeats all reproduce cleanly.</li>
-      <li><strong>Durability:</strong> The woven structure compresses and recovers differently from tufted pile. In heavy-traffic corridors and lobbies, an Axminster carpet will retain its pile height and visual integrity significantly longer than an equivalent-weight tufted product.</li>
-      <li><strong>Dimensional stability:</strong> Woven construction has very low stretch, making it easier to install over large areas without the rippling or lifting that can affect tufted carpet over time.</li>
-    </ul>
-
-    <div class="article-callout">
-      <p>"In premium hospitality, Axminster isn't specified for its looks alone — it's specified because it performs. A lobby carpet needs to look the same in year three as it did on opening day."</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">1755</div>
+        <p>Thomas Whitty founds the first Axminster carpet manufactory in Devon, England, developing the woven-pile construction that takes the town's name.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Late 1700s</div>
+        <p>Axminster carpet earns Royal Warrants and is installed in royal residences across Britain and Europe. The name becomes synonymous with a standard of quality that tufted manufacture hasn't yet arrived to challenge.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1800s</div>
+        <p>Industrial looms spread Axminster weaving well beyond Devon. Grand hotels, government buildings, ocean liners and embassies all specify it as a matter of course.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">20th Century</div>
+        <p>The 80/20 wool-nylon blend is developed for commercial hospitality use, pairing wool's natural resilience with nylon's abrasion resistance. It becomes the industry standard and has stayed there.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Today</div>
+        <p>Axminster remains the benchmark specification for premium hotel lobbies, ballrooms, boardrooms and VIP suites globally. The construction principle is unchanged from what Whitty developed in 1755.</p>
+      </div>
     </div>
 
-    <h2>The 80/20 Wool-Nylon Blend</h2>
+    <div class="article-callout">
+      <p>"The same construction that furnished royal palaces in the 18th century is still being specified for five-star hotel lobbies today. That's not nostalgia. That's a product that genuinely hasn't been bettered."</p>
+    </div>
 
-    <p>Traditional Axminster carpet is made from an <strong>80% wool / 20% nylon blend</strong> — a formulation that has been standard in the hospitality industry for decades. The wool component provides natural resilience, warmth underfoot, and a surface that responds beautifully to light. The nylon component adds abrasion resistance and tensile strength, extending service life in high-traffic areas.</p>
+    <!-- Photo 1 -->
+    <div class="photo-block">
+      <img src="../images/carpet14.jpg" alt="Persian Medallion woven carpet — navy, burgundy and gold heritage design for hotel lobbies">
+      <div class="photo-caption">Woven medallion pattern — the design vocabulary that made Axminster the hospitality standard</div>
+    </div>
 
-    <p>This blend is specifically engineered for commercial hospitality use. Pure wool Axminster exists for residential applications, but the 80/20 blend is the hospitality standard — it is what specifiers mean when they write "Axminster, hospitality grade" on a schedule of finishes.</p>
+    <h2>Woven, Not Tufted</h2>
 
-    <h2>Where Axminster Is Specified</h2>
+    <p>Most carpet sold in India today is tufted. A tufting machine punches pile yarns through a pre-woven backing at speed, which is why tufted carpet is economical and widely available. The pile stays in place because an adhesive secondary backing holds it there, not because of anything structural in the fabric itself.</p>
 
-    <p>Axminster is not a general-purpose carpet. It is a premium specification for spaces where both visual impact and long-term performance are non-negotiable:</p>
+    <p>Axminster is different. The pile yarns are woven into the backing as the carpet is made, interlocked into the fabric structure row by row. There is no adhesive. The pile is part of the weave. This changes how the carpet behaves in almost every practical way.</p>
 
-    <ul>
-      <li><strong>Hotel lobbies and reception areas</strong> — the single highest-visibility surface in any hotel, where footfall is constant and first impressions are permanent</li>
-      <li><strong>Banquet halls and ballrooms</strong> — where large-format pattern repeats can be accommodated and the scale of the space justifies the investment</li>
-      <li><strong>VIP suites and premium guest corridors</strong> — where the tactile quality of wool pile is part of the guest experience</li>
-      <li><strong>Corporate boardrooms and executive floors</strong> — where a woven carpet signals permanence and considered specification rather than off-the-shelf fit-out</li>
-      <li><strong>Heritage and boutique hotels</strong> — where traditional woven construction is consistent with a narrative of craftsmanship and authenticity</li>
-    </ul>
+    <p>Because the pile is mechanically secured rather than glued, individual tufts cannot work loose over time. In a high-footfall lobby or banquet corridor, that matters enormously. Tufted carpet in those conditions requires regular maintenance to manage tuft loss; Axminster doesn't have that problem. The woven structure also compresses and recovers differently from tufted pile, holding its height and surface integrity through years of heavy use rather than matting down in traffic lanes.</p>
 
-    <h2>Why Axminster Over Standard Broadloom?</h2>
+    <p>Pattern definition is another difference worth understanding. Axminster looms weave complex multi-colour designs row by row, with a precision that tufting cannot approach. That's why the classic hospitality carpet looks the way it does: sharp medallion repeats, clean geometric borders, colourways that register exactly. You cannot achieve the same result from a tufting machine regardless of how much you spend on it.</p>
 
-    <p>Standard broadloom carpet — tufted, typically in a 100% nylon or polypropylene construction — is entirely appropriate for standard guest rooms, back-of-house corridors, and budget hospitality projects. It is cost-effective, quick to install, and available in a wide range of weights and constructions.</p>
+    <!-- Photo grid -->
+    <div class="photo-grid">
+      <div>
+        <img src="../images/carpet1.jpg" alt="Geometric woven carpet — navy diamond lattice, Anchorline collection">
+        <div class="photo-caption" style="text-align:left;padding-top:8px">Geometric grid — woven pattern definition</div>
+      </div>
+      <div>
+        <img src="../images/carpet5.jpg" alt="Retro Links woven carpet — interlocking quatrefoil in navy and gold">
+        <div class="photo-caption" style="text-align:left;padding-top:8px">Retro Links — multi-colour woven repeat</div>
+      </div>
+    </div>
 
-    <p>The case for Axminster in premium areas comes down to three things:</p>
+    <h2>The 80/20 Blend</h2>
 
-    <ul>
-      <li><strong>Lifecycle cost:</strong> A higher-quality woven carpet specified correctly will outlast two or three replacement cycles of a cheaper tufted product. Over a 10-year hotel ownership period, the total cost of ownership often favours the Axminster specification.</li>
-      <li><strong>Custom design:</strong> Axminster can be woven to a project-specific pattern, colourway, and border configuration. Standard broadloom is selected from existing ranges. For a hotel with a defined design identity, the ability to have a bespoke floor pattern is a meaningful differentiator.</li>
-      <li><strong>Material integrity:</strong> The wool-blend surface has a visual and tactile quality that synthetic broadloom cannot replicate — particularly under the warm lighting common in hospitality environments. This matters to guests, even those who cannot articulate why the floor feels right.</li>
-    </ul>
+    <p>When specifiers write "Axminster, hospitality grade" on a schedule of finishes, they mean a specific yarn composition: <strong>80% wool, 20% nylon</strong>. This blend has been the industry standard for decades and for good reason. Wool gives the carpet its natural resilience and the way it takes light, especially under the warm ambient lighting that defines good hotel design. Nylon adds abrasion resistance and extends the working life in areas where pure wool would eventually show wear.</p>
 
-    <h2>Custom Design and Project Specification</h2>
+    <p>Pure wool Axminster exists and it is beautiful, but it is a residential product. The 80/20 blend was developed specifically for commercial use, and in hospitality environments it is simply the right material.</p>
 
-    <p>One of the most underused capabilities of Axminster is the design flexibility it offers. Unlike standard broadloom where the designer selects from an existing collection, Axminster can be woven to a fully bespoke design — a hotel's own medallion pattern, a custom colourway that coordinates with FF&amp;E specifications, a border detail that frames a corridor or pre-function space.</p>
+    <h2>Where It Gets Specified</h2>
 
-    <p>The design process typically works as follows: the designer provides artwork (or works with the supplier to develop it), colourways are confirmed from yarn samples, and the carpet is woven to exact room dimensions. Lead times for bespoke Axminster are longer than stock broadloom — typically 12 to 20 weeks from artwork approval — but the result is a floor that is entirely specific to the project.</p>
+    <p>Axminster is not a general-purpose carpet and no one uses it as one. It goes where the investment is justified by the visibility or the expected service life of the space. Hotel lobbies and reception areas are the most common application, because the lobby floor is one of the first things a guest registers and one of the last things they remember. Banquet halls and ballrooms work well because the scale of the space allows a complex pattern repeat to read properly. VIP suites and premium corridors benefit from the tactile quality of a wool pile underfoot in a way that synthetic broadloom simply does not deliver.</p>
 
-    <h2>Sourcing Axminster Carpet in India</h2>
+    <p>In corporate settings, the boardroom and executive floor are the natural locations. There is something about a woven carpet that reads differently to a guest or client than a tufted floor, even if they cannot say exactly what it is. The material signals a certain permanence and intention that off-the-shelf fit-out cannot replicate.</p>
 
-    <p>Until recently, specifying genuine woven Axminster for an Indian hospitality project meant importing from UK manufacturers and navigating complex logistics, customs, and lead times. Anchorline has developed direct sourcing access for woven Axminster carpet — wool-blend, hospitality-grade construction — available for Indian hospitality and corporate interior projects.</p>
+    <!-- Photo 3 -->
+    <div class="photo-block">
+      <img src="../images/carpet13.jpg" alt="River Flow woven carpet — rust, indigo and cream for premium hospitality corridors">
+      <div class="photo-caption">Premium woven construction — the kind of pattern depth that tufted manufacture cannot replicate</div>
+    </div>
 
-    <p>We work with designers, architects, and fit-out contractors on a project-by-project basis: helping to develop the specification, providing yarn and pile samples, and managing the sourcing and delivery process. There are no minimum order quantities for initial project discussions.</p>
+    <h2>The Case for the Investment</h2>
+
+    <p>Tufted broadloom is entirely the right product for standard guest rooms, back-of-house corridors, and projects working within a tight budget. It is cost-effective, quick to source, and available in enough construction weights to handle almost any application. There is no reason to specify Axminster where standard broadloom will do the job properly.</p>
+
+    <p>But in the spaces where Axminster is appropriate, the investment argument is actually quite straightforward. A well-specified woven carpet will outlast two or three replacement cycles of a cheaper tufted product in the same location. Over a ten-year hotel ownership period, the total cost of ownership frequently favours Axminster, even before you account for the disruption and associated costs of those replacement cycles. Projects that choose on initial price alone sometimes end up spending more in the end.</p>
+
+    <p>Then there is the design dimension. Standard broadloom means selecting from an existing collection. Axminster means designing from scratch if you want to: your own medallion, your own colourway, a border that coordinates with the FF&E palette, a pattern scaled to the proportions of a specific corridor or ballroom. For a hotel with a genuine design identity rather than an off-the-shelf interior, that distinction matters.</p>
+
+    <h2>Custom Design and the Specification Process</h2>
+
+    <p>The design process for a bespoke Axminster project typically begins with artwork, either supplied by the designer or developed collaboratively. Colourways are confirmed from physical yarn samples before production starts, and the carpet is woven to room dimensions rather than cut from a roll. Lead times are longer than stock broadloom, usually in the 12 to 20 week range from artwork sign-off, but the end result is a floor that belongs to that project and no other.</p>
+
+    <p>Most designers who have specified bespoke Axminster once continue to do so. The process is not complicated once you know how it works, and the result is genuinely hard to achieve by any other means.</p>
+
+    <!-- Anchorline capability block -->
+    <div class="capability-block">
+      <div class="cap-eyebrow">Anchorline Capability</div>
+      <h2 style="margin-top:0">Axminster. Now, for India.</h2>
+      <p>Anchorline supplies genuine woven Axminster carpet for hotels, resorts and corporate interiors across India. Wool-blend, hospitality-grade construction, available on a project-by-project basis with no rigid minimum quantities.</p>
+      <p>We work directly with designers and architects from first brief to delivery: helping develop the pattern and colourway, arranging physical samples, and managing the project from sign-off through. Every specification is treated as a bespoke brief, because it is.</p>
+      <ul class="cap-points">
+        <li>Woven 80/20 wool-nylon construction</li>
+        <li>Custom design & colourways</li>
+        <li>Hospitality-grade pile weight</li>
+        <li>Project samples provided</li>
+        <li>No rigid minimum quantities</li>
+        <li>Pan-India project delivery</li>
+      </ul>
+    </div>
 
   </div>
 
