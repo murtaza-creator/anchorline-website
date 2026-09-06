@@ -355,6 +355,45 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 .hero-actions{animation:fadeUp .6s .3s both}
 .hero-trust{animation:fadeUp .6s .4s both}
 
+/* ── Bespoke Rugs ── */
+.bespoke-section{padding:96px 80px;background:var(--white)}
+.bespoke-intro{max-width:680px;margin-bottom:72px}
+.bespoke-intro .sec-body{margin-bottom:0;max-width:none}
+.construction-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:72px}
+.construction-card{background:var(--cream);border:1px solid var(--sand);padding:40px;border-radius:4px;position:relative;overflow:hidden}
+.construction-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--terracotta),var(--warm))}
+.cc-badge{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);background:rgba(232,69,26,.08);border:1px solid rgba(232,69,26,.15);padding:5px 12px;border-radius:12px;display:inline-block;margin-bottom:20px}
+.cc-title{font-family:var(--serif);font-size:1.35rem;color:var(--ink);margin-bottom:12px;font-weight:400}
+.cc-body{font-size:.85rem;color:var(--mid);line-height:1.8;margin-bottom:20px}
+.cc-specs{list-style:none;display:flex;flex-direction:column;gap:8px}
+.cc-specs li{font-size:.8rem;color:var(--mid);padding-left:16px;position:relative;line-height:1.55}
+.cc-specs li::before{content:'—';position:absolute;left:0;color:var(--terracotta);font-size:.75rem}
+.designs-gallery{margin-bottom:72px}
+.designs-gallery-head{margin-bottom:32px}
+.designs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.design-card{border-radius:3px;overflow:hidden;position:relative;aspect-ratio:3/4;cursor:pointer}
+.design-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.design-card:hover img{transform:scale(1.05)}
+.design-caption{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(0deg,rgba(26,43,107,.85) 0%,transparent 100%);color:rgba(255,248,242,.9);font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
+.bespoke-process{background:linear-gradient(135deg,var(--forest) 0%,#0D1C55 100%);padding:64px 80px;margin:0 -80px;position:relative}
+.bp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-top:48px}
+.bp-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,217,184,.1);padding:28px 24px;text-align:center;transition:background .3s}
+.bp-step:hover{background:rgba(255,255,255,.1)}
+.bp-num{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--warm);margin-bottom:12px}
+.bp-step-title{font-family:var(--serif);font-size:.95rem;color:var(--ivory);margin-bottom:8px;font-weight:400}
+.bp-step-body{font-size:.75rem;color:rgba(255,248,242,.45);line-height:1.65}
+.spec-strip{background:var(--cream);padding:48px 80px;margin:0 -80px;border-top:2px solid var(--sand);border-bottom:2px solid var(--sand)}
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;max-width:1040px;margin:0 auto}
+.spec-item{text-align:center}
+.spec-value{font-family:var(--serif);font-size:1.8rem;color:var(--terracotta);font-weight:400;line-height:1;margin-bottom:6px}
+.spec-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+.bespoke-cta{margin-top:72px;background:linear-gradient(135deg,var(--cream),#FFF4EC);border:1px solid var(--sand);border-radius:4px;padding:52px;text-align:center;position:relative;overflow:hidden}
+.bespoke-cta::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(245,166,35,.15) 0%,transparent 70%);pointer-events:none}
+.bespoke-cta-title{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);color:var(--ink);margin-bottom:12px;font-weight:400}
+.bespoke-cta-title em{font-style:italic;color:var(--terracotta)}
+.bespoke-cta-body{font-size:.88rem;color:var(--mid);line-height:1.75;max-width:480px;margin:0 auto 32px}
+.bespoke-cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
 /* ── Responsive ── */
 @media(max-width:1100px){
   .product-grid{grid-template-columns:repeat(2,1fr)}
@@ -362,12 +401,13 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   .testi-grid{grid-template-columns:repeat(2,1fr)}
   .founder-section{grid-template-columns:1fr;gap:48px}
   .founder-photo{max-width:320px}
+  .bp-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:900px){
   nav{padding:0 24px}.nav-center{display:none}
   .hero{grid-template-columns:1fr}.hero-right{height:360px}.hero-left{padding:48px 24px}
   .sample-section{padding:64px 24px}.sample-inner{grid-template-columns:1fr;gap:40px}
-  .serve-section,.products-section,.why-section,.contact-section,.process-section,.founder-section,.testimonials-section,#insights{padding:64px 24px}
+  .serve-section,.products-section,.why-section,.contact-section,.process-section,.founder-section,.testimonials-section,#insights,.bespoke-section{padding:64px 24px}
   #insights .insights-grid{grid-template-columns:1fr!important}
   .serve-grid{grid-template-columns:1fr 1fr}.process-section{grid-template-columns:1fr}
   .process-visual{height:260px}.contact-section{grid-template-columns:1fr}
@@ -378,6 +418,12 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   .product-grid{grid-template-columns:repeat(2,1fr)}
   .testi-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
+  .construction-grid{grid-template-columns:1fr}
+  .designs-grid{grid-template-columns:repeat(2,1fr)}
+  .bp-grid{grid-template-columns:1fr 1fr}
+  .spec-grid{grid-template-columns:repeat(2,1fr)}
+  .bespoke-process{padding:48px 24px;margin:0 -24px}
+  .spec-strip{padding:36px 24px;margin:0 -24px}
 }
 </style>
 </head>
@@ -392,6 +438,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   </a>
   <ul class="nav-center">
     <li><a href="#products">Products</a></li>
+    <li><a href="#bespoke-rugs">Bespoke Rugs</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#process">How It Works</a></li>
     <li><a href="#why">Why Anchorline</a></li>
@@ -519,6 +566,146 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   <div class="product-grid" id="productGrid"></div>
 </section>
 
+<!-- ═══════════════════════ BESPOKE RUGS ═══════════════════════ -->
+<section class="bespoke-section" id="bespoke-rugs">
+
+  <!-- Kicker + Headline + Intro -->
+  <div class="bespoke-intro">
+    <div class="sec-eyebrow">Custom &amp; Bespoke Rugs</div>
+    <h2 class="sec-title">Designed for your space,<br><em>woven to order</em></h2>
+    <p class="sec-body">A bespoke rug is not simply a product — it is the centrepiece of a space. For hotels, boardrooms, and premium residential projects where the floor needs to say something specific, Anchorline sources hand-crafted rugs made entirely to your brief: your size, your pattern, your colourway, your pile. We work with skilled Indian rug-making workshops to deliver one-of-a-kind pieces with the quality and consistency that project specifications demand.</p>
+  </div>
+
+  <!-- Construction comparison -->
+  <div class="construction-grid">
+    <div class="construction-card">
+      <span class="cc-badge">Hand-Tufted</span>
+      <div class="cc-title">Hand-Tufted Rugs</div>
+      <p class="cc-body">A tufting gun drives pile yarn through a backing canvas, which is then finished for stability. The result is a dense, consistent pile that holds pattern and colour with remarkable fidelity. Hand-tufted rugs are the practical choice for large-format hospitality applications — ballrooms, corridors, suite lobbies — where repeatability and lead time matter as much as appearance.</p>
+      <ul class="cc-specs">
+        <li>Pile heights from 8mm to 25mm</li>
+        <li>Wool, wool-nylon blend, or pure viscose options</li>
+        <li>Custom shapes: rectangular, round, custom-cut</li>
+        <li>Minimum order from 1 piece</li>
+        <li>Lead time: [10–14 weeks, confirm with supply]</li>
+      </ul>
+    </div>
+    <div class="construction-card">
+      <span class="cc-badge">Hand-Knotted</span>
+      <div class="cc-title">Hand-Knotted Rugs</div>
+      <p class="cc-body">Each knot is tied by hand around the warp threads — a process unchanged for centuries and still unmatched for depth of pattern, texture, and longevity. A well-made hand-knotted rug improves with age. These are statement pieces for spaces where the rug is the design — a VIP suite, a private dining room, an executive boardroom — and where the client expects something that cannot be bought off a shelf.</p>
+      <ul class="cc-specs">
+        <li>Knot densities from 40 to 120 KPSI</li>
+        <li>New Zealand wool, Tibetan wool, or silk highlights</li>
+        <li>Complex geometric, floral, and abstract patterns</li>
+        <li>Available in any custom size</li>
+        <li>Lead time: [16–24 weeks, confirm with supply]</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Example designs gallery -->
+  <div class="designs-gallery">
+    <div class="designs-gallery-head">
+      <div class="sec-eyebrow">From Our Portfolio</div>
+      <h3 class="sec-title" style="font-size:clamp(1.4rem,2vw,2rem);margin-bottom:8px">Example <em>designs</em></h3>
+      <p style="font-size:.82rem;color:var(--mid);max-width:520px;margin-bottom:0">A selection from our made-to-order range. Every design is available in custom sizes, colourways, and pile constructions.</p>
+    </div>
+    <!-- Replace these with Saraswati deck images: copy images/rug-01.jpg through rug-04.jpg into the images/ folder -->
+    <div class="designs-grid">
+      <div class="design-card">
+        <img src="images/carpet1.jpg" alt="Geometric Heritage — custom hand-tufted rug in navy and gold" loading="lazy">
+        <div class="design-caption">Geometric Heritage — Navy &amp; Gold</div>
+      </div>
+      <div class="design-card">
+        <img src="images/carpet3.jpg" alt="Modern Abstract — custom hand-tufted rug in charcoal and ivory" loading="lazy">
+        <div class="design-caption">Modern Abstract — Charcoal &amp; Ivory</div>
+      </div>
+      <div class="design-card">
+        <img src="images/carpet14.jpg" alt="Classic Medallion — hand-knotted rug in burgundy and cream" loading="lazy">
+        <div class="design-caption">Classic Medallion — Burgundy &amp; Cream</div>
+      </div>
+      <div class="design-card">
+        <img src="images/carpet5.jpg" alt="Contemporary Linear — hand-tufted rug in forest and sand" loading="lazy">
+        <div class="design-caption">Contemporary Linear — Forest &amp; Sand</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bespoke process strip (dark) -->
+  <div class="bespoke-process">
+    <div style="max-width:1040px;margin:0 auto">
+      <div class="sec-eyebrow" style="color:var(--warm)"><span style="width:28px;height:2px;background:linear-gradient(90deg,var(--warm),var(--terracotta));border-radius:1px;display:inline-block"></span>How We Work</div>
+      <h3 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;color:var(--ivory);margin-bottom:0;line-height:1.2">From brief to <em style="font-style:italic;color:var(--warm)">finished piece</em></h3>
+      <div class="bp-grid">
+        <div class="bp-step">
+          <div class="bp-num">01</div>
+          <div class="bp-step-title">Share your brief</div>
+          <div class="bp-step-body">Space dimensions, design direction, pile preference, and budget. A quick WhatsApp conversation is usually enough to get started.</div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-num">02</div>
+          <div class="bp-step-title">Design development</div>
+          <div class="bp-step-body">We translate your brief into a design proposal with colourway options, construction recommendation, and a sample swatch for approval.</div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-num">03</div>
+          <div class="bp-step-title">Sample approval</div>
+          <div class="bp-step-body">A production sample is made to your approved design. You confirm before full production begins — no surprises on delivery.</div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-num">04</div>
+          <div class="bp-step-title">Crafting &amp; QC</div>
+          <div class="bp-step-body">Your rug is made by skilled craftspeople with quality checks at every stage. Pile density, colourway accuracy, and finishing are verified against spec.</div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-num">05</div>
+          <div class="bp-step-title">Delivery to site</div>
+          <div class="bp-step-body">Packaged and delivered to your project site, with full documentation. Pan-India delivery with care handling for large-format pieces.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spec capability strip -->
+  <div class="spec-strip">
+    <div style="text-align:center;margin-bottom:36px">
+      <div class="sec-eyebrow" style="justify-content:center">What We Can Do</div>
+      <h3 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);font-weight:400;color:var(--ink);margin:0">Capability at a glance</h3>
+    </div>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="spec-value">Any</div>
+        <div class="spec-label">Custom Size &amp; Shape</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">8–25mm</div>
+        <div class="spec-label">Pile Height Range</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">100%</div>
+        <div class="spec-label">Custom Colourways</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">1+</div>
+        <div class="spec-label">Minimum Quantity (pieces)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bespoke-cta">
+    <div class="sec-eyebrow" style="justify-content:center">Start a Conversation</div>
+    <h3 class="bespoke-cta-title">Every rug starts with<br><em>a brief</em></h3>
+    <p class="bespoke-cta-body">Whether you have a clear design in mind or simply know the space and the feeling you want to create — share your brief with us and we will take it from there. No obligation, no minimum spend.</p>
+    <div class="bespoke-cta-actions">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Discuss Your Rug Brief</button>
+      <a href="https://wa.me/919326325037?text=Hi%20Murtaza%2C%20I%20would%20like%20to%20discuss%20a%20custom%20rug%20for%20a%20project." target="_blank" class="btn-secondary" style="display:flex;align-items:center;gap:8px;text-decoration:none;">WhatsApp Us <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+
+</section>
+
 <!-- ═══════════════════════ FOUNDER / ABOUT (P1) ═══════════════════════ -->
 <section class="founder-section" id="about">
   <div class="founder-photo">
@@ -606,6 +793,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
         <select class="form-select" name="interest">
           <option value="">Select a category</option>
           <option>Axminster Carpet</option>
+          <option>Custom &amp; Bespoke Rugs</option>
           <option>Carpet Tiles &amp; Broadloom Carpets</option>
           <option>LVT Flooring</option>
           <option>Curtain &amp; Upholstery Fabrics and Made-to-Measure Curtains</option>
