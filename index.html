@@ -452,6 +452,23 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   .bespoke-process{padding:48px 24px;margin:0 -24px}
   .spec-strip{padding:36px 24px;margin:0 -24px}
 }
+
+/* ── Video Reel Section ── */
+.video-reel{position:relative;width:100%;height:480px;overflow:hidden;background:var(--ink)}
+.video-reel video,.video-reel .video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.video-reel .video-poster{z-index:1}
+.video-reel video{z-index:2}
+.video-reel-overlay{position:absolute;inset:0;z-index:3;background:linear-gradient(to bottom,rgba(8,14,40,.25) 0%,rgba(8,14,40,.55) 100%);display:flex;align-items:center;justify-content:center}
+.video-reel-text{text-align:center;color:var(--white);max-width:720px;padding:0 24px}
+.video-reel-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,248,242,.7);margin-bottom:20px;opacity:0;animation:vr-fade-up .8s ease .2s forwards}
+.video-reel-headline{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:400;line-height:1.2;text-shadow:0 2px 20px rgba(0,0,0,.4);opacity:0;animation:vr-fade-up .8s ease .5s forwards}
+.video-reel-headline em{font-style:italic;color:var(--sand)}
+@keyframes vr-fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){
+  .video-reel video{display:none}
+  .video-reel-eyebrow,.video-reel-headline{animation:none;opacity:1}
+}
+@media(max-width:900px){.video-reel{height:320px}}
 </style>
 </head>
 <body>
@@ -528,6 +545,41 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
     <span class="strip-item">Axminster Carpet</span><span class="strip-item">PP (Polypropylene) Carpet</span><span class="strip-item">Carpet Tiles</span><span class="strip-item">Broadloom Carpets</span><span class="strip-item">LVT Flooring</span><span class="strip-item">Curtain &amp; Upholstery Fabrics</span><span class="strip-item">Made-to-Measure Curtains</span><span class="strip-item">Roller Blinds</span><span class="strip-item">Roman Blinds</span><span class="strip-item">Zebra Blinds</span><span class="strip-item">FR-Certified Options</span><span class="strip-item">Upholstery Fabrics</span><span class="strip-item">Custom Installations</span>
   </div>
 </div>
+
+<!-- ═══════════════════════ VIDEO REEL ═══════════════════════ -->
+<section class="video-reel" aria-label="Anchorline materials reel">
+  <!-- Poster shown while video loads, if video is missing, or on reduced-motion -->
+  <img class="video-poster" src="images/hero-reception.jpg" alt="Anchorline hospitality interior — carpet and flooring installed" loading="lazy">
+  <!-- Video replaces poster once loaded; hidden until canplay fires to avoid black flash -->
+  <video
+    id="videoReel"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="none"
+    poster="images/hero-reception.jpg"
+    style="opacity:0;transition:opacity .6s ease"
+  >
+    <source src="videos/hero-texture.mp4" type="video/mp4">
+  </video>
+  <div class="video-reel-overlay">
+    <div class="video-reel-text">
+      <div class="video-reel-eyebrow">Anchorline · Materials, Installed</div>
+      <h2 class="video-reel-headline">Looking for carpets that<br><em>outlast the trend.</em></h2>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var v = document.getElementById('videoReel');
+  if (!v) return;
+  // Only show video once it can play — avoids black-frame flash if file is missing
+  v.addEventListener('canplay', function(){ v.style.opacity = '1'; }, {once:true});
+  // If video errors (file not found), keep it hidden — poster image shows through
+  v.addEventListener('error', function(){ v.style.display = 'none'; }, {once:true});
+})();
+</script>
 
 <!-- ═══════════════════════ SAMPLE KIT CTA (P3 — cold tier) ═══════════════════════ -->
 <section class="sample-section" id="sample-kit">
