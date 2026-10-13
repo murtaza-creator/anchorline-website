@@ -164,12 +164,24 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
 @media(max-width:640px){
   nav{padding:0 20px}
   .nav-links{display:none}
+  .btn-nav{display:none}
+  .nav-hamburger{display:flex}
   .hero,.section,.form-section,.terms-strip,.wa-section{padding-left:20px;padding-right:20px}
   .hero{padding-top:52px;padding-bottom:60px}
   .form-row{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .checkbox-group{grid-template-columns:1fr}
 }
+/* ── Hamburger ── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:10px;margin:-10px;width:44px;height:44px}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--forest);border-radius:2px;transition:transform .25s,opacity .25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{display:none;position:fixed;inset:0;top:64px;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:28px 24px;gap:4px;overflow-y:auto;border-top:2px solid var(--sand)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--mono);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--sand);display:block}
+.mobile-nav a.mn-cta{color:var(--terracotta);font-weight:600}
 </style>
 </head>
 <body>
@@ -187,7 +199,17 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
     <li><a href="/#contact">Contact</a></li>
   </ul>
   <a href="#brief-form" class="btn-nav">Submit Brief</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="/#products" onclick="closeMobileNav()">Products</a>
+  <a href="/#about" onclick="closeMobileNav()">About</a>
+  <a href="/#insights" onclick="closeMobileNav()">Insights</a>
+  <a href="/#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#brief-form" class="mn-cta" onclick="closeMobileNav()">Submit Brief →</a>
+</div>
 
 <!-- Hero -->
 <div class="hero">
@@ -578,6 +600,11 @@ document.getElementById('designerForm').addEventListener('submit', async functio
     btn.disabled = false;
   }
 });
+</script>
+<script>
+function toggleMobileNav(){var n=document.getElementById('mobile-nav'),b=document.getElementById('nav-hamburger'),o=n.classList.contains('open');if(o){closeMobileNav();}else{n.classList.add('open');b.classList.add('open');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}}
+function closeMobileNav(){var n=document.getElementById('mobile-nav'),b=document.getElementById('nav-hamburger');n.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+window.addEventListener('resize',function(){if(window.innerWidth>640)closeMobileNav();});
 </script>
 
 </body>
