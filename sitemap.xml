@@ -74,6 +74,14 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Trade pages -->
+  <url>
+    <loc>https://anchorline.in/designers</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://anchorline.in/blog/axminster-carpet-installation-guide</loc>
     <lastmod>2026-10-01</lastmod>
