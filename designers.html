@@ -161,6 +161,16 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
   .steps{grid-template-columns:1fr 1fr}
   .terms-grid{grid-template-columns:1fr}
 }
+/* ── Hamburger ── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:10px;margin:-10px;width:44px;height:44px}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--forest);border-radius:2px;transition:transform .25s,opacity .25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{display:none;position:fixed;inset:0;top:64px;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:28px 24px;gap:4px;overflow-y:auto;border-top:2px solid var(--sand)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--mono);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--sand);display:block}
+.mobile-nav a.mn-cta{color:var(--terracotta);font-weight:600}
 @media(max-width:640px){
   nav{padding:0 20px}
   .nav-links{display:none}
@@ -172,16 +182,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
   .steps{grid-template-columns:1fr}
   .checkbox-group{grid-template-columns:1fr}
 }
-/* ── Hamburger ── */
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:10px;margin:-10px;width:44px;height:44px}
-.nav-hamburger span{display:block;width:22px;height:2px;background:var(--forest);border-radius:2px;transition:transform .25s,opacity .25s}
-.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-hamburger.open span:nth-child(2){opacity:0}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;position:fixed;inset:0;top:64px;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:28px 24px;gap:4px;overflow-y:auto;border-top:2px solid var(--sand)}
-.mobile-nav.open{display:flex}
-.mobile-nav a{font-family:var(--mono);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--sand);display:block}
-.mobile-nav a.mn-cta{color:var(--terracotta);font-weight:600}
 </style>
 </head>
 <body>
