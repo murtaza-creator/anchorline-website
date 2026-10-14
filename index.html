@@ -289,7 +289,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
 .founder-accent-title{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:2px}
 .founder-content .sec-body{margin-bottom:32px}
 .founder-quote{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--forest);border-left:3px solid var(--warm);padding-left:20px;line-height:1.65;margin-bottom:36px}
-.founder-meta{display:flex;gap:32px;flex-wrap:wrap}
+.founder-sig{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--forest);margin-top:8px;margin-bottom:28px}
+.founder-meta{display:flex;gap:24px;flex-wrap:wrap}
 .founder-meta-item{display:flex;flex-direction:column;gap:4px}
 .founder-meta-num{font-family:var(--serif);font-size:1.8rem;color:var(--terracotta);font-weight:400;line-height:1}
 .founder-meta-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--light)}
@@ -546,7 +547,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
     <li><a href="/designers" style="color:var(--terracotta);opacity:1">For Designers</a></li>
   </ul>
   <div class="nav-right">
-    <button class="btn-nav-outline" onclick="document.getElementById('sample-kit').scrollIntoView({behavior:'smooth'})">Request Sample Kit</button>
+    <button class="btn-nav-outline" onclick="document.getElementById('sample-kit').scrollIntoView({behavior:'smooth'})">Request Samples</button>
     <button class="btn-nav-fill" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
   </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileNav()">
@@ -563,7 +564,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
   <a href="/designers" class="mn-cta" onclick="closeMobileNav()">For Designers →</a>
   <div class="mobile-nav-actions">
-    <button class="btn-nav-fill" onclick="closeMobileNav();document.getElementById('sample-kit').scrollIntoView({behavior:'smooth'})">Request Sample Kit</button>
+    <button class="btn-nav-fill" onclick="closeMobileNav();document.getElementById('sample-kit').scrollIntoView({behavior:'smooth'})">Request Samples</button>
     <button class="btn-nav-outline" onclick="closeMobileNav();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
   </div>
 </div>
@@ -577,7 +578,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
     <p class="hero-desc">Anchorline supplies <strong>woven Axminster carpet, FR-certified carpet tiles, broadloom carpets, LVT flooring, premium curtain &amp; upholstery fabrics, made-to-measure curtains</strong> and <strong>window blinds</strong>. A complete material partner for hotels, resorts, fit-out contractors, interior designers and architects. Mumbai-based, supplying hospitality projects pan-India.</p>
     <div class="hero-actions">
       <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore Products</button>
-      <button class="btn-secondary" onclick="document.getElementById('sample-kit').scrollIntoView({behavior:'smooth'})">Request a Free Sample Kit <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="btn-secondary" onclick="document.getElementById('sample-kit').scrollIntoView({behavior:'smooth'})">Request Samples <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <div class="hero-trust">
       <div class="trust-item"><div class="trust-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l1.8 3.6L15 6.5l-3 2.9.7 4.1L9 11.5l-3.7 2 .7-4.1-3-2.9 4.2-.9L9 2z" stroke="#1A2B6B" stroke-width="1.2" fill="none"/></svg></div><div class="trust-text"><strong>Curated Quality</strong>Verified Indian mill partners</div></div>
@@ -659,19 +660,19 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 <section class="sample-section" id="sample-kit">
   <div class="sample-inner">
     <div class="sample-left">
-      <div class="sec-eyebrow">Free Sample Kit</div>
+      <div class="sec-eyebrow">Request Samples</div>
       <h2 class="sample-title">Touch the materials<br>before you <em>specify them</em></h2>
-      <p class="sample-desc">We'll send a curated set of fabric, carpet, and flooring samples directly to your studio, no commitment, no cost. Just tell us your name and WhatsApp number.</p>
+      <p class="sample-desc">General quality swatches are free. We'll dispatch them to your studio — courier is INR 400 to most cities. Shade cards are available on request for active projects. Tell us your name and WhatsApp number and we'll be in touch.</p>
     </div>
     <div class="sample-form">
-      <div class="sample-form-title">Request your sample kit</div>
+      <div class="sample-form-title">Request samples</div>
       <div class="sample-form-sub">Takes 30 seconds · We'll WhatsApp you to confirm</div>
       <form id="sampleForm" action="https://formspree.io/f/xgongqka" method="POST">
         <input type="hidden" name="_subject" value="Sample Kit Request — Anchorline">
         <input class="sample-input" type="text" name="name" placeholder="Your name" required>
         <input class="sample-input" type="text" name="firm" placeholder="Firm / Studio (optional)">
         <input class="sample-input" type="tel" name="phone" placeholder="WhatsApp number (+91...)" required>
-        <button type="submit" class="btn-sample">Send Me a Sample Kit →</button>
+        <button type="submit" class="btn-sample">Request Samples →</button>
       </form>
       <div class="sample-privacy">B2B / project supply only · Your details stay private</div>
     </div>
@@ -706,7 +707,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 <section class="products-section" id="products">
   <div class="products-header">
     <div><div class="sec-eyebrow">Our Range</div><h2 class="sec-title">What we <em>offer</em></h2></div>
-    <a href="#sample-kit" class="view-all">Request Sample Kit →</a>
+    <a href="#sample-kit" class="view-all">Request Samples →</a>
   </div>
   <div class="cat-tabs">
     <button class="cat-tab active" onclick="filterCat(this,'all')">All Products</button>
@@ -905,13 +906,15 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   <div class="founder-content">
     <div class="sec-eyebrow">About</div>
     <h2 class="sec-title">Ten years in the trade.<br><em>One place to source.</em></h2>
-    <p class="sec-body">Murtaza Mir grew up in a family carpet and furnishing business his father started in 1995, and joined it formally in 2015. Over the next decade he worked across B2B supply — supplying retailers, hotel and hospitality fit-outs, and commercial projects — building direct relationships with mills, processors and logistics partners across India.</p>
-    <p class="sec-body">He later founded his own wholesale supply business for curtains, fabrics and furnishings before setting up Anchorline in 2026. The idea was straightforward: architects, designers and specifiers in India spend too much time chasing multiple vendors. Anchorline is one place to specify, sample and supply, project by project.</p>
-    <p class="sec-body">The manufacturer relationships that make rapid sampling and dye-lot consistency possible come from years of direct dealings — not a marketplace model.</p>
+    <p class="sec-body">I grew up in my family's carpet and furnishing business, which my father started in 1995, and I joined it in 2015. I have spent ten years on the supply side of the trade: retailers, hotel and hospitality fit-outs, and commercial projects.</p>
+    <p class="sec-body">Along the way I built direct relationships with mills, processors and logistics partners across India, and later started my own wholesale business for curtains, fabrics and furnishings. On every project I saw the same problem. Architects and designers lose weeks chasing vendors, waiting for samples, and comparing quotes that can't be compared.</p>
+    <p class="sec-body">Anchorline, set up in 2026, is my answer: one place to specify, sample and supply, project by project. Share a brief, get swatches in days, and approve a physical sample before anything goes into production.</p>
+    <p class="founder-sig">Murtaza Mir, Founder</p>
     <div class="founder-meta">
-      <div class="founder-meta-item"><div class="founder-meta-num">10 yrs</div><div class="founder-meta-label">Founder in the trade</div></div>
-      <div class="founder-meta-item"><div class="founder-meta-num">Direct</div><div class="founder-meta-label">Manufacturer relationships</div></div>
+      <div class="founder-meta-item"><div class="founder-meta-num">10 yrs</div><div class="founder-meta-label">In the carpet and furnishing trade</div></div>
+      <div class="founder-meta-item"><div class="founder-meta-num">Direct</div><div class="founder-meta-label">Mill and manufacturer relationships</div></div>
       <div class="founder-meta-item"><div class="founder-meta-num">No MOQ</div><div class="founder-meta-label">For designers &amp; architects</div></div>
+      <div class="founder-meta-item"><div class="founder-meta-num">Swatches</div><div class="founder-meta-label">In days</div></div>
     </div>
   </div>
 </section>
@@ -920,7 +923,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 <section class="process-section" id="process">
   <div class="process-visual">
     <div class="pv-main"><div class="pv-main-content"><div class="pv-main-title">From brief<br>to <em>beautiful</em></div><div class="pv-main-sub">End-to-end service for design professionals</div></div></div>
-    <div class="pv-accent"><div class="pv-accent-num">100%</div><div class="pv-accent-label">Custom Made</div></div>
+    <div class="pv-accent"><div class="pv-accent-num" style="font-size:1rem;letter-spacing:.02em">Custom rugs</div><div class="pv-accent-label">Made to your brief</div></div>
   </div>
   <div>
     <div class="sec-eyebrow">How It Works</div>
@@ -944,15 +947,8 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
     <div class="why-card"><div class="wc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16V8l6-5 6 5v8" stroke="#C4A882" stroke-width="1.2" stroke-linejoin="round"/><rect x="7" y="11" width="6" height="5" stroke="#C4A882" stroke-width="1.2"/></svg></div><div class="wc-title">Mumbai-First Focus</div><div class="wc-body">Built specifically for Mumbai's design community with deep understanding of what works in Mumbai homes, offices, and hospitality spaces.</div></div>
     <div class="why-card"><div class="wc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="1" stroke="#C4A882" stroke-width="1.2"/><path d="M7 10l2 2 4-4" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="wc-title">Trade-Only Pricing</div><div class="wc-body">We work exclusively with professionals: better pricing, no retail markups, and trade terms that make sense for your practice.</div></div>
     <div class="why-card"><div class="wc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4m0 0l3-6 4 3-6 3zm4-4l3-8 3 5" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="wc-title">Full Range in One Place</div><div class="wc-body">Carpet tiles, broadloom carpets, LVT flooring, curtain &amp; upholstery fabrics, and all blind types. One supplier for every material need on your project.</div></div>
-    <div class="why-card"><div class="wc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3C6.13 3 3 6.13 3 10s3.13 7 7 7 7-3.13 7-7" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round"/><path d="M13 3l4 4-4 4" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="wc-title">The Bigger Vision</div><div class="wc-body">Anchorline is the foundation of something larger — a unified material sourcing platform for India's design industry. Every relationship we build today is a node in that network. Join us early.</div></div>
+    <div class="why-card"><div class="wc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3C6.13 3 3 6.13 3 10s3.13 7 7 7 7-3.13 7-7" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round"/><path d="M13 3l4 4-4 4" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="wc-title">The Bigger Vision</div><div class="wc-body">We are building towards a sample bank for India's design community, starting with carpets and rugs.</div></div>
   </div>
-</section>
-
-<!-- ═══════════════════════ TESTIMONIALS (P1 — hidden until populated) ═══════════════════════ -->
-<section class="testimonials-section" id="testimonials">
-  <div class="sec-eyebrow">What Our Clients Say</div>
-  <h2 class="sec-title">Trusted by hotels &amp; designers<br><em>across India</em></h2>
-  <div class="testi-grid" id="testiGrid"></div>
 </section>
 
 <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
@@ -1114,7 +1110,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
       <div class="footer-logo-sub">Anchorline Global Trade Pvt. Ltd.</div>
       <div class="footer-gst">GST: 27ABECA6297P1ZU &nbsp;·&nbsp; CIN: U46410MH2026PTC465757 &nbsp;·&nbsp; MSME: UDYAM-MH-19-0450713</div>
       <div class="footer-tagline-txt">Woven Axminster carpet, carpet tiles, broadloom carpets, LVT flooring, curtain &amp; upholstery fabrics, window blinds and complete window solutions for hotels, hospitality projects and design professionals.</div>
-      <div class="footer-tagline-txt" style="margin-top:10px;font-style:italic;color:rgba(255,248,242,.3)">Building towards India's Material Bank — the complete digital sourcing platform for design professionals.</div>
+      <div class="footer-tagline-txt" style="margin-top:10px;font-style:italic;color:rgba(255,248,242,.3)">Building towards a sample bank for India's design community, starting with carpets and rugs.</div>
       <div class="footer-mumbai">📍 Mumbai HQ · Pan-India project supply</div>
     </div>
     <div>
