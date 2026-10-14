@@ -82,7 +82,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
 .section-body{font-size:1rem;line-height:1.8;color:rgba(28,28,30,.7);max-width:620px}
 
 /* ── How it works ── */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
 .step{padding:28px 24px;background:var(--sand);border-radius:4px;border:1px solid rgba(196,168,130,.3);position:relative}
 .step-num{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .step-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--forest);margin-bottom:10px}
@@ -218,7 +218,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
     <div class="hero-eyebrow">Anchorline · Project Desk · Trade Only</div>
     <h1 class="hero-title">Start your project.<br><em>Swatches in days, not weeks.</em></h1>
     <p class="hero-trust-line">Backed by 10 years of trade experience. No minimum order for designers and architects.</p>
-    <p class="hero-desc">The fastest way to get the right sample into your hands. Share your brief in two minutes — we confirm construction and pricing within 24 hours, and dispatch swatches to your studio directly.</p>
+    <p class="hero-desc">The fastest way to get the right sample into your hands. Share your brief in two minutes — we confirm construction and pricing within 24 hours, verify your studio, and dispatch swatches within 24 hours of verification.</p>
     <div class="hero-badges">
       <span class="hero-badge">Custom &amp; bespoke rugs</span>
       <span class="hero-badge">Runners</span>
@@ -243,16 +243,21 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
       </div>
       <div class="step">
         <div class="step-num">Step 02</div>
-        <div class="step-title">We confirm construction and pricing</div>
-        <div class="step-body">Within 24 hours we come back with the recommended construction, pile weight, and a production estimate.</div>
+        <div class="step-title">We verify your studio</div>
+        <div class="step-body">We check your studio website or Instagram to confirm you're a working design professional. Takes less than 24 hours.</div>
       </div>
       <div class="step">
         <div class="step-num">Step 03</div>
-        <div class="step-title">Swatches dispatched</div>
-        <div class="step-body">General quality swatches are free and dispatched within 24 hours to 5 days. Custom swatches are produced in 10 days.</div>
+        <div class="step-title">We confirm construction and pricing</div>
+        <div class="step-body">After verification we come back with the recommended construction, pile weight, and a production estimate.</div>
       </div>
       <div class="step">
         <div class="step-num">Step 04</div>
+        <div class="step-title">Swatches dispatched</div>
+        <div class="step-body">General quality swatches are free and dispatched after verification. Custom swatches are produced in 10 days. Courier is ₹400.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 05</div>
         <div class="step-title">Production only after approval</div>
         <div class="step-body">We do not begin production until the physical sample is approved. Quality is confirmed against the approved sample.</div>
       </div>
@@ -266,8 +271,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
   <div class="terms-grid">
     <div class="term-card">
       <div class="term-label">General quality swatches</div>
-      <div class="term-value">Free</div>
-      <div class="term-note">Dispatched within 24 hours to 5 business days to your studio.</div>
+      <div class="term-value">Free for verified studios</div>
+      <div class="term-note">For verified design professionals with an active project. One free swatch set per studio until a quote has been sent. Dispatched within 24 hours of verification.</div>
     </div>
     <div class="term-card">
       <div class="term-label">Custom swatch</div>
@@ -302,7 +307,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
   <div class="form-wrap">
     <div class="eyebrow">Submit a Project Brief</div>
     <h2 class="section-title" style="margin-bottom:8px">Tell us about your project</h2>
-    <p class="section-body" style="margin-bottom:40px">All fields marked <span style="color:var(--terracotta)">*</span> are required. We'll come back within 24 hours.</p>
+    <p class="section-body" style="margin-bottom:28px">All fields marked <span style="color:var(--terracotta)">*</span> are required. We'll come back within 24 hours.</p>
+    <div style="margin-bottom:32px;padding:18px 22px;background:var(--sand);border-radius:3px;border-left:3px solid var(--gold)">
+      <div style="font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Trade-only, verified</div>
+      <p style="font-size:.9rem;line-height:1.7;color:rgba(28,28,30,.75);margin:0">To keep sampling fast and fair for working professionals, we verify every studio before dispatching swatches. Share your studio website or Instagram and your project details, and we'll confirm within 24 hours.</p>
+    </div>
 
     <div id="formMsg" class="form-msg" role="alert"></div>
 
@@ -350,9 +359,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label" for="studio_web">Studio website or Instagram</label>
-          <input class="form-input" type="text" id="studio_web" name="studio_web" placeholder="studioeleven.in or @studioeleven">
-          <div class="form-hint">Helps us verify your studio before dispatching free samples</div>
+          <label class="form-label" for="studio_web">Studio website or Instagram <span class="req">*</span></label>
+          <input class="form-input" type="text" id="studio_web" name="studio_web" placeholder="studioeleven.in or @studioeleven" required>
+          <div class="form-hint">Required to verify your studio before dispatching swatches</div>
         </div>
       </div>
 
@@ -390,8 +399,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label" for="size_qty">Size and shape, area (sq ft / sqm), or quantity</label>
-          <input class="form-input" type="text" id="size_qty" name="size_qty" placeholder="e.g. 3×5m rug, or 200 sqft broadloom, or 2 rugs at 2×3m each">
+          <label class="form-label" for="size_qty">Size and shape, area (sq ft / sqm), or quantity <span class="req">*</span></label>
+          <input class="form-input" type="text" id="size_qty" name="size_qty" placeholder="e.g. 3×5m rug, or 200 sqft broadloom, or 2 rugs at 2×3m each" required>
         </div>
       </div>
 
@@ -447,8 +456,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="deadline">Decision or delivery deadline</label>
-            <input class="form-input" type="text" id="deadline" name="deadline" placeholder="e.g. mid-November 2026">
+            <label class="form-label" for="deadline">Decision or delivery deadline <span class="req">*</span></label>
+            <input class="form-input" type="text" id="deadline" name="deadline" placeholder="e.g. mid-November 2026" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="delivery_address">Delivery address for samples</label>
@@ -466,6 +475,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
       </div>
 
       <button type="submit" class="btn-submit" id="submitBtn">Send Brief →</button>
+      <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:var(--light);text-align:center;margin-top:14px">Swatches are dispatched after we verify your studio. We'll confirm within 24 hours.</p>
     </form>
   </div>
 </div>
@@ -552,6 +562,9 @@ document.getElementById('designerForm').addEventListener('submit', async functio
   const consent = form.consent.checked;
   const products    = [...form.querySelectorAll('[name=products]:checked')].map(i => i.value);
   const whatYouNeed = [...form.querySelectorAll('[name=what_you_need]:checked')].map(i => i.value);
+  const studioWeb   = form.studio_web.value.trim();
+  const sizeQty     = form.size_qty.value.trim();
+  const deadline    = form.deadline.value.trim();
 
   function showError(text) {
     msg.textContent = text;
@@ -566,6 +579,9 @@ document.getElementById('designerForm').addEventListener('submit', async functio
   if (!city)               return showError('Please enter your city.');
   if (!products.length)    return showError('Please select at least one product.');
   if (!whatYouNeed.length) return showError('Please select what you need from us.');
+  if (!studioWeb)          return showError('Please provide your studio website or Instagram — needed to verify your studio.');
+  if (!sizeQty)            return showError('Please enter the size or quantity.');
+  if (!deadline)           return showError('Please enter your decision or delivery deadline.');
   if (!consent)            return showError('Please accept the privacy policy to continue.');
 
   msg.className = 'form-msg';
@@ -582,7 +598,7 @@ document.getElementById('designerForm').addEventListener('submit', async functio
     const json = await res.json();
 
     if (json.ok) {
-      msg.innerHTML = '<strong>Brief received.</strong> We\'ll confirm your sampling plan within 24 hours. Check your email for a summary — if you don\'t see it, try WhatsApp.';
+      msg.innerHTML = '<strong>Brief received.</strong> We\'ll verify your studio and confirm your sampling plan within 24 hours. Swatches go out after verification. Check your email — if you don\'t see it, try WhatsApp.';
       msg.className = 'form-msg success show';
       form.reset();
       document.getElementById('fileNameDisplay').textContent = 'Image or PDF · max 5 MB';
