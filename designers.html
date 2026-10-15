@@ -359,7 +359,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
         </div>
         <div class="form-group">
           <label class="form-label" for="studio_web">Studio website or Instagram <span class="req">*</span></label>
-          <input class="form-input" type="text" id="studio_web" name="studio_web" placeholder="studioeleven.in or @studioeleven" required>
+          <input class="form-input" type="text" id="studio_web" name="studio_web" placeholder="studioeleven.in or @studioeleven" inputmode="text" required>
           <div class="form-hint">Required to verify your studio before dispatching swatches</div>
         </div>
       </div>
@@ -578,6 +578,11 @@ document.getElementById('designerForm').addEventListener('submit', async functio
   if (!products.length)    return showError('Please select at least one product.');
   if (!whatYouNeed.length) return showError('Please select what you need from us.');
   if (!studioWeb)          return showError('Please provide your studio website or Instagram — needed to verify your studio.');
+  const swIsEmail     = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(studioWeb);
+  const swIsHandle    = /^@[\w.]+$/.test(studioWeb);
+  const swIsInstagram = /instagram\.com/i.test(studioWeb);
+  const swIsUrl       = !studioWeb.includes('@') && !studioWeb.includes(' ') && studioWeb.includes('.');
+  if (swIsEmail || (!swIsHandle && !swIsInstagram && !swIsUrl)) return showError('Please enter your studio website or Instagram handle (for example @yourstudio or yourstudio.in).');
   if (!sizeQty)            return showError('Please enter the size or quantity.');
   if (!deadline)           return showError('Please enter your decision or delivery deadline.');
   if (!consent)            return showError('Please accept the privacy policy to continue.');
