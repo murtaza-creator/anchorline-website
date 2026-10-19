@@ -63,9 +63,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
 .btn-nav:hover{background:var(--forest);color:var(--white)}
 
 /* ── Hero ── */
-.hero{background:linear-gradient(135deg,var(--forest) 0%,#2A3F8F 50%,#1A3550 100%);padding:80px 80px 88px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,var(--forest) 0%,#2A3F8F 50%,#1A3550 100%);position:relative;overflow:hidden;display:flex;align-items:stretch;min-height:520px}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(196,168,130,.12) 0%,transparent 55%),radial-gradient(circle at 10% 85%,rgba(255,255,255,.04) 0%,transparent 40%);pointer-events:none}
-.hero-inner{max-width:760px;position:relative}
+.hero-inner{flex:1 1 55%;padding:80px 80px 88px;position:relative;z-index:1}
+.hero-image{flex:0 0 45%;position:relative;overflow:hidden}
+.hero-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.88) saturate(1.08)}
+.hero-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(26,43,107,.35) 0%,transparent 40%);pointer-events:none}
 .hero-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .hero-title{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:400;line-height:1.1;color:var(--white);margin-bottom:24px}
 .hero-title em{font-style:italic;color:var(--gold)}
@@ -172,13 +175,17 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
 .mobile-nav.open{display:flex}
 .mobile-nav a{font-family:var(--mono);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--sand);display:block}
 .mobile-nav a.mn-cta{color:var(--terracotta);font-weight:600}
+@media(max-width:900px){
+  .hero-image{display:none}
+  .hero-inner{padding:60px 40px 68px}
+}
 @media(max-width:640px){
   nav{padding:0 20px}
   .nav-links{display:none}
   .btn-nav{display:none}
   .nav-hamburger{display:flex}
   .hero,.section,.form-section,.terms-strip,.wa-section{padding-left:20px;padding-right:20px}
-  .hero{padding-top:52px;padding-bottom:60px}
+  .hero-inner{padding-top:52px;padding-bottom:60px}
   .form-row{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .checkbox-group{grid-template-columns:1fr}
@@ -227,6 +234,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-
       <span class="hero-badge">No minimum order</span>
       <span class="hero-badge">Pan-India delivery</span>
     </div>
+  </div>
+  <div class="hero-image">
+    <img src="/images/designers-hero.jpg" alt="Custom hand-tufted rug in a luxury interior — Anchorline" loading="eager" fetchpriority="high">
   </div>
 </div>
 
