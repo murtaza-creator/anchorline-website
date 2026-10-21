@@ -630,14 +630,12 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
     id="videoReel"
     autoplay
     muted
-    loop
     playsinline
     preload="none"
     poster="images/hero-reception.jpg"
     style="opacity:0;transition:opacity .6s ease"
   >
     <source src="videos/hero-texture.mp4" type="video/mp4">
-    <source src="videos/Anchorline_tufting_video.mp4" type="video/mp4">
   </video>
   <div class="video-reel-overlay">
     <div class="video-reel-text">
@@ -650,10 +648,18 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 (function(){
   var v = document.getElementById('videoReel');
   if (!v) return;
-  // Only show video once it can play — avoids black-frame flash if file is missing
+  var playlist = [
+    'videos/hero-texture.mp4',
+    'videos/Anchorline_tufting_video.mp4'
+  ];
+  var current = 0;
   v.addEventListener('canplay', function(){ v.style.opacity = '1'; }, {once:true});
-  // If video errors (file not found), keep it hidden — poster image shows through
   v.addEventListener('error', function(){ v.style.display = 'none'; }, {once:true});
+  v.addEventListener('ended', function(){
+    current = (current + 1) % playlist.length;
+    v.src = playlist[current];
+    v.play();
+  });
 })();
 </script>
 
