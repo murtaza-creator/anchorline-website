@@ -397,6 +397,7 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 
 /* ── Bespoke Rugs ── */
 .bespoke-section{padding:96px 80px;background:var(--white)}
+#insights{padding:96px 80px}
 .bespoke-intro{max-width:680px;margin-bottom:72px}
 .bespoke-intro .sec-body{margin-bottom:0;max-width:none}
 .construction-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:72px}
@@ -475,7 +476,9 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
   .hero{grid-template-columns:1fr}.hero-right{height:300px}.hero-left{padding:40px 20px}
   .sample-section{padding:64px 24px}.sample-inner{grid-template-columns:1fr;gap:40px}
   .serve-section,.products-section,.why-section,.contact-section,.process-section,.founder-section,.testimonials-section,#insights,.bespoke-section{padding:64px 24px}
-  #insights .insights-grid{grid-template-columns:1fr!important}
+  #insights .insights-grid{grid-template-columns:1fr!important;gap:16px!important}
+  #insights .insights-grid a div:first-child{height:130px!important}
+  #insights .insights-grid a div:last-child{padding:18px!important}
   .serve-grid{grid-template-columns:1fr 1fr}.process-section{grid-template-columns:1fr}
   .process-visual{height:260px}.contact-section{grid-template-columns:1fr}
   .footer-main{grid-template-columns:1fr 1fr;padding:48px 24px}
@@ -1006,11 +1009,11 @@ footer{background:linear-gradient(135deg,var(--ink) 0%,#0D1C55 100%);border-top:
 </section>
 
 <!-- ═══════════════════════ INSIGHTS ═══════════════════════ -->
-<section id="insights" style="padding:96px 80px;background:var(--sand)">
+<section id="insights" style="background:var(--sand)">
   <div style="max-width:1200px;margin:0 auto">
     <div class="sec-eyebrow">Insights</div>
     <h2 class="sec-title" style="margin-bottom:48px">Materials, <em>explained</em></h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+    <div class="insights-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
       <!-- Article card -->
       <a href="blog/axminster-carpet-guide.html" style="text-decoration:none;display:block;background:var(--white);border-radius:4px;overflow:hidden;border:1px solid rgba(196,168,130,.3);transition:transform .3s,box-shadow .3s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(26,43,107,.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <div style="height:180px;background:linear-gradient(135deg,#1A2B6B 0%,#2A3F8F 60%,#39415A 100%);display:flex;align-items:center;justify-content:center;padding:32px">
